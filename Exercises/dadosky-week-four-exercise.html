@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, Welcome!</h1>
+    <script defer>
+        let temperature = prompt("What is the temperature in Fahrenheit?")
+        temperature=Number(temperature);
+        if (temperature < 40){
+            alert("Sounds chilly!")
+        }
+
+        let age = prompt("Enter your age")
+        age=Number(age);
+    if (age >= 21) {
+        alert("You can purchase alcohol!");
+    } else {
+        alert("You cannot purchase alcohol, you must be at least 21!");
+    }
+
+        let score = prompt("What is the most recent test score you have recieved?")
+        score=Number(score);
+        if (score >= 90) {
+            alert("Good job on that A! That's an excellent score!");
+        } else if (score >= 80) {
+            alert("A B is a great score! Keep up the good work.");
+        } else if (score >= 70) {
+            alert("A C! Not too bad, keep on studying!");
+        } else if (score >= 60) {
+            alert("You might need to study some more, but don't give up!")
+        } else {
+            alert("An F! Oh no! Don't give up, keep pushing!");
+        }
+            
+        let color = prompt("Pick a color in the ROYGBV rainbow:");
+
+        switch (color) {
+            case "red":
+                alert("Just like a ladybug! I love red!");
+                break;
+            case "orange":
+                alert("I love seeing orange in sunsets!");
+                break;
+            case "yellow":
+                alert("Just like the sun! Yellow is a very happy color!");
+                break;
+            case "green":
+                alert("Nature's favorite color! Great choice.");
+                break;
+            case "blue":
+                alert("When the sky is blue, it is a great day.");
+                break;
+            case "violet":
+                alert("Such a beautiful color, reminds me of the twilight sky");
+                break;
+            default:
+                alert("Invalid color.");
+            
+        }
+
+
+    </script>
+</body>
+</html>
