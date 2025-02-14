@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let name= prompt ("What is your name?");
+
+        alert("Welcome to my finished Week 3 activity, " + name + "!");
+        let newName = prompt("Would you like to update your name? If so, enter a new name. If not, leave blank and press OK.");
+        if (newName) {
+        name = newName;
+        alert("Your name has been updated to " + name + "!");}
+
+        let favoriteColor= prompt ("What is your favorite color?")
+
+        alert("I like that color too, " + name + "!")
+        
+        let newColor = prompt ("Would you like to update your favorite color?")
+        if (newColor) {
+            favoriteColor = newColor;
+            alert("Your favorite color has been updated to " + favoriteColor + "!");
+        }
+        alert("Let's multiply two numbers together!" )
+
+        let num1 = prompt ("Enter below your first number")
+        let num2 = prompt ("Enter below your second number here")
+        console.log("Initial num1:", num1);
+        console.log("Initial num2:", num2);
+
+        num1 = Number(prompt("Enter a new value to update num1:"));
+        console.log("Updated num1:", num1);
+        let sum = num1 * num2;
+        alert("Product of updated numbers are: "+ sum);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
