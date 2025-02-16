@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Menu</title>
+    <style>
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-size: 24px;
+            color: blue;
+        }
+        .center-text {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        nav {
+            text-align: center; /* Centers the whole nav */
+            margin-top: 70px; /* Space from the heading */
+        }
+        #menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: inline-flex; 
+            justify-content: center; 
+        }
+
+        #menu li {
+            margin-right: 20px; 
+        }
+
+        #menu li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: blue;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #menu li a:hover {
+            background-color: #f0f0f0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="center-text">
+    <h1>Basic Homepage</h1>
+    </div>
+    <nav>
+        <ul id="menu"></ul>
+    </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuItems = [
+        ["home.html", "Home"],
+        ["about.html", "About Us"],
+        ["services.html", "Services"],
+        ["contact.html", "Contact"],
+        ["blog.html", "Blog"]
+    ];
+   
+
+    const menuList = document.getElementById("menu");
+
+    for (let i = 0; i < menuItems.length; i++) {
+        let listItem = document.createElement("li");
+        let link = document.createElement("a");
+
+        link.href = menuItems[i][0];
+        link.textContent = menuItems[i][1];
+
+        listItem.appendChild(link);
+        menuList.appendChild(listItem);
+    }
+});
+
+    </script>
+    
+</body>
+</html>
