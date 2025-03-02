@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7 Form</title>
+</head>
+<body>
+    <h2>Exercise 7 Form</h2>
+    <form id="myForm">
+        <input type="text" id="textInput" placeholder="Enter your name"><br><br>
+        <input type="number" id="numberInput" placeholder="Enter your favorite number"><br><br>
+        <input type="checkbox" id="checkboxInput"> Check this if you love Javascript!<br><br>
+      <body>Check how you identify below</body><br><br>
+        <input type="radio" name="radioGroup" value="Male"> Male
+        <input type="radio" name="radioGroup" value="Female"> Female
+        <input type="radio" name="radioGroup" value="Other"> Other <br><br>
+       <p>Choose your favorite type of snack?</p>
+        <select id="dropdown">
+            <option value="Sweet">Sweet</option>
+            <option value="Salty">Salty</option>
+        </select>
+        <button type="button" onclick="handleSubmit()">Submit</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function handleSubmit() {
+            let text = document.getElementById('textInput').value;
+            let number = document.getElementById('numberInput').value;
+            let checkbox = document.getElementById('checkboxInput').checked ? 'Checked' : 'Unchecked';
+            let radio = document.querySelector('input[name="radioGroup"]:checked');
+            let radioValue = radio ? radio.value : 'None selected';
+            let dropdown = document.getElementById('dropdown').value;
+            
+            document.getElementById('result').innerHTML = `Text: ${text}, Number: ${number}, Checkbox: ${checkbox}, Radio: ${radioValue}, Dropdown: ${dropdown}`;
+        }
+    </script>
+</body>
+</html>
