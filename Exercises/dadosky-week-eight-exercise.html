@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Exercise</title>
+    <style>
+        .color-box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Week 8 - Array Exercise</h1>
+    
+    <div id="container"></div>
+    
+    <h2>Original Array:</h2>
+    <p id="original-array"></p> <!-- Element to display the original array -->
+
+    <h2>Second Item in the Array:</h2>
+    <p id="second-item"></p> <!-- Element to display the second item -->
+
+    <h2>Updated Array After Removal:</h2>
+    <p id="updated-array"></p> <!-- Element to display the updated array -->
+
+    <script>
+        // Create an array and display it
+        let colors = ["red", "blue", "green"];
+        console.log("Original array:", colors);
+
+        // Add at least three values to the array and display it
+        colors.push("yellow", "purple", "orange");
+        console.log("Array after adding values:", colors);
+
+        // Display the original array
+        let originalArray = colors.join(", ");
+        document.getElementById("original-array").textContent = originalArray;
+
+        // Sort the array and display it
+        colors.sort();
+        console.log("Sorted array:", colors);
+
+        // Remove one item and display the updated array
+        colors.pop(); // Remove the last item ("orange")
+        console.log("Array after removing an item:", colors);
+
+        // Display the second item in the array
+        console.log("Second item in the array:", colors[1]);
+
+        // Display the second item individually on the page
+        let secondItem = colors[1];
+        document.getElementById("second-item").textContent = secondItem;  // Display second item
+
+        // Display the updated array after removal
+        let updatedArray = colors.join(", ");
+        document.getElementById("updated-array").textContent = updatedArray; // Display the updated array
+
+        // Bonus: Display an array using a loop and modify CSS properties
+        let container = document.getElementById("container");
+
+        colors.forEach(color => {
+            let div = document.createElement("div");
+            div.textContent = color;
+            div.className = "color-box";
+            div.style.backgroundColor = color;
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>
